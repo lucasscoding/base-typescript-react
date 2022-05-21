@@ -15,6 +15,13 @@ module.exports = {
       '@': path.join(__dirname, 'src')
     }
   },
+  module: {
+    rules: [{
+      test: /\.ts(x?)$/,
+      loader: 'ts-loader',
+      exclude: /node_modules/
+    }]
+  },
   devServer: {
     static: './public',
     historyApiFallback: true,
